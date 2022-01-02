@@ -1,10 +1,13 @@
 {
   "name": "zoomkoding.com",
   "private": false,
+  "homepage": "https://minhye0k.github.io/",
   "description": "A neat blog theme for developers",
   "version": "2.0.0",
   "author": "zoomkoding <zoomkoding@gmail.com>",
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.1.0",
     "gatsby": "^3.12.1",
@@ -50,7 +53,7 @@
     "build": "gatsby clean && gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "deploy": "gatsby clean && gatsby build && gh-pages -d public",
+    "deploy": "gatsby build && gh-pages -b master -d public",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
