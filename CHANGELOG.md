@@ -1,5 +1,6 @@
 # Change Log
 
+<<<<<<< HEAD
 ## 1.3.15
 
 ### Patch Changes
@@ -23,6 +24,8 @@
 - Updated dependencies [[`ee969f3`](https://github.com/LekoArts/gatsby-themes/commit/ee969f30037fa99232292014431854773735d0a0)]:
   - @lekoarts/gatsby-theme-minimal-blog@5.0.0
 
+=======
+>>>>>>> d20c40a4 (Initial commit from gatsby: (https://github.com/LekoArts/gatsby-starter-minimal-blog.git))
 ## 1.3.12
 
 ### Patch Changes

@@ -1,0 +1,50 @@
+---
+title: Spring AOP 와 Self invocation 은 무슨 관계가 있는걸까?
+date: 2023-05-07
+tags:
+  - Spring
+  - Spring AOP
+  - Proxy
+  - Issue
+---
+
+
+### Spring AOP 동작 방식과 밀접한 Self-invocation
+
+***
+
+#### 들어가기전
+
+***
+
+#### Our Goals
+1. Spring AOP 와 Self-invocation 의 연관성 이해
+2. Self-invocation 해결책
+
+```js
+package com.example.jpastudy;
+
+import com.example.jpastudy.start.Member;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import java.util.List;
+
+@Component
+public class BusinessI implements Business{
+    @Override
+    public void ready() {
+        System.out.println("ready...");
+        this.go(); ← go() 메소드 호출
+    }
+
+    @Override
+    public void go() {
+        System.out.println("go...");
+    }
+}
+```
