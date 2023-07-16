@@ -11,7 +11,7 @@ const config: GatsbyConfig = {
     siteTitle: `Development Record`,
     siteTitleAlt: `Development Record - Ethan`,
     siteHeadline: `Development Record - @minhye0k`,
-    siteUrl: `https://minhye0k.github.io/`,
+    siteUrl: `https://minhye0k.github.io`,
     siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
