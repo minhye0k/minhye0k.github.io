@@ -20,6 +20,15 @@ const config: GatsbyConfig = {
   trailingSlash: `never`,
   plugins: [
     {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [
+          'G-VLHPLQMLT5',
+        ]
+      }
+
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://minhye0k.github.io/',
