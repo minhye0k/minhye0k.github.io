@@ -7,7 +7,7 @@
   "license": "0BSD",
   "starter-name": "gatsby-starter-minimal-blog",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && cp content/pages/google867b1472bc1ad086.html public/",
     "develop": "gatsby develop",
     "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
@@ -19,9 +19,11 @@
   "dependencies": {
     "@lekoarts/gatsby-theme-minimal-blog": "^6.0.5",
     "gatsby": "^5.9.0",
+    "gatsby-plugin-advanced-sitemap": "^2.1.0",
     "gatsby-plugin-feed": "^5.9.0",
     "gatsby-plugin-manifest": "^5.9.0",
     "gatsby-plugin-mdx": "^5.10.0",
+    "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sitemap": "^6.9.0",
     "gatsby-plugin-webpack-statoscope": "^1.0.2",
     "prismjs": "^1.29.0",

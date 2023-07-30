@@ -11,7 +11,7 @@ const config: GatsbyConfig = {
     siteTitle: `Development Record`,
     siteTitleAlt: `Development Record - Ethan`,
     siteHeadline: `Development Record - @minhye0k`,
-    siteUrl: `https://minhye0k.github.io`,
+    siteUrl: `https://minhye0k.github.io/`,
     siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
@@ -19,6 +19,15 @@ const config: GatsbyConfig = {
   },
   trailingSlash: `never`,
   plugins: [
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://minhye0k.github.io/',
+        sitemap: 'https://minhye0k.github.io/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '.'}],
+      },
+    },
+    'gatsby-plugin-advanced-sitemap',
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
@@ -39,12 +48,6 @@ const config: GatsbyConfig = {
             url: `https://github.com/minhye0k`,
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/`,
       },
     },
     {
@@ -119,7 +122,7 @@ const config: GatsbyConfig = {
   }
 }`,
             output: `rss.xml`,
-            title: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
+            title: `minhye0k's technical blog`,
           },
         ],
       },
